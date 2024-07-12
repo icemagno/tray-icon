@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.3</version>
+		<relativePath/> 
+	</parent>
+	
+	
+	<groupId>br.com.cmabreu</groupId>
+	<artifactId>petrobras-teste-sp</artifactId>
+	<version>1.0</version>
+	<name>petrobras-teste-sp</name>
+	<description>Prova de Conceito Para Sistema Desktop</description>
+	
+	<properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<geotools.version>30-SNAPSHOT</geotools.version>
+    	<maven.test.skip>true</maven.test.skip>
+    	<java.version>11</java.version>
+	</properties>
+	
+	<dependencies>
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-main</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-xml</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-shapefile</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>
+		
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-tile-client</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>		
+
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-render</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>
+		
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-tile-client</artifactId>
+            <version>${geotools.version}</version>
+        </dependency>
+        		
+	    <dependency>
+	      <groupId>org.geotools.xsd</groupId>
+	      <artifactId>gt-xsd-core</artifactId>
+	      <version>${geotools.version}</version>
+	    </dependency>		
+		
+	    <dependency>
+	        <groupId>org.geotools</groupId>
+	        <artifactId>gt-referencing</artifactId>
+	        <version>${geotools.version}</version>
+	    </dependency>
+
+	    <dependency>
+	        <groupId>org.geotools</groupId>
+	        <artifactId>gt-coverage</artifactId>
+	        <version>${geotools.version}</version>
+	    </dependency>		
+		
+		
+	    <dependency>
+	        <groupId>org.geotools</groupId>
+	        <artifactId>gt-geotiff</artifactId>
+	        <version>${geotools.version}</version>
+	    </dependency>
+
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-swing</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>
+					
+		<dependency>
+			<groupId>org.geotools</groupId>
+			<artifactId>gt-opengis</artifactId>
+			<version>${geotools.version}</version>
+		</dependency>			
+
+        <dependency>
+            <groupId>org.geotools</groupId>
+            <artifactId>gt-epsg-hsql</artifactId>
+            <version>${geotools.version}</version>                 
+        </dependency>
+
+		<dependency>
+		    <groupId>dk.tbsalling</groupId>
+		    <artifactId>aismessages</artifactId>
+		    <version>3.3.2</version>
+		</dependency>	
+
+		<dependency>
+		    <groupId>dk.tbsalling</groupId>
+		    <artifactId>aisutils</artifactId>
+		    <version>1.1.4</version>
+		</dependency>	
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+		    <version>20230227</version>
+        </dependency>	
+	
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>osgeo</id>
+			<name>OSGeo Release Repository</name>
+			<url>https://repo.osgeo.org/repository/release/</url>
+			<snapshots><enabled>false</enabled></snapshots>
+			<releases><enabled>true</enabled></releases>
+		</repository>
+		<repository>
+			<id>osgeo-snapshot</id>
+			<name>OSGeo Snapshot Repository</name>
+			<url>https://repo.osgeo.org/repository/snapshot/</url>
+			<snapshots><enabled>true</enabled></snapshots>
+			<releases><enabled>false</enabled></releases>
+		</repository>	
+		
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
